@@ -1,0 +1,107 @@
+/**
+ * HomePage.module.less — 首页样式
+ */
+
+.homePage {
+  min-height: 100vh;
+  background: @bg-page;
+}
+
+// ====== Header ======
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 @spacing-lg !important;
+  background: linear-gradient(135deg, #001529, #002140) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.userName {
+  color: #fff;
+  font-size: @font-size-base;
+}
+
+// ====== 主内容 ======
+.content {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: @spacing-lg;
+
+  @media (max-width: 768px) {
+    padding: @spacing-md;
+  }
+}
+
+// ====== 欢迎卡片 ======
+.welcomeCard {
+  border-radius: @radius-base;
+  border-left: 4px solid @primary-color;
+
+  :global(.ant-card-body) {
+    padding: @spacing-lg;
+  }
+}
+
+.welcomeTitle {
+  margin: 0;
+  font-size: @font-size-xl;
+  color: @text-primary;
+}
+
+// ====== 学习模块卡片 ======
+.moduleCard {
+  display: flex;
+  align-items: flex-start;
+  gap: @spacing-md;
+}
+
+.moduleIcon {
+  font-size: 28px;
+  margin-top: 4px;
+}
+
+.moduleDesc {
+  color: @text-secondary;
+  font-size: @font-size-sm;
+  margin: @spacing-xs 0 0;
+}
+
+// ====== 进度区域 ======
+.progressSection {
+  text-align: center;
+
+  h3 {
+    color: @success-color;
+    margin: 0;
+  }
+}
+
+// ====== Footer ======
+.footer {
+  text-align: center;
+  background: #f0f2f5;
+  color: @text-hint;
+  font-size: @font-size-sm;
+}

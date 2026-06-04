@@ -1,0 +1,128 @@
+/**
+ * RegisterPage.module.less — 注册页样式
+ */
+
+.registerPage {
+  display: flex;
+  min-height: 100vh;
+}
+
+// ====== 左侧品牌区 ======
+.brandSection {
+  flex: 1;
+  background: linear-gradient(135deg, #52c41a, #1890ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: @spacing-2xl;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.brandContent {
+  max-width: 420px;
+  color: #fff;
+}
+
+.brandTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: @spacing-sm;
+  color: #fff;
+}
+
+.brandDesc {
+  font-size: @font-size-xl;
+  opacity: 0.85;
+  margin-bottom: @spacing-2xl;
+}
+
+.stepPreview {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-lg;
+}
+
+.previewItem {
+  display: flex;
+  align-items: center;
+  gap: @spacing-md;
+  font-size: @font-size-lg;
+  opacity: 0.9;
+}
+
+.previewNum {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: @font-size-base;
+  font-weight: 600;
+}
+
+// ====== 右侧表单区 ======
+.formSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: @bg-page;
+  padding: @spacing-lg;
+
+  @media (max-width: 768px) {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+.formCard {
+  width: 100%;
+  max-width: 460px;
+  border-radius: @radius-lg !important;
+  box-shadow: @shadow-card !important;
+
+  :global(.ant-card-body) {
+    padding: @spacing-2xl !important;
+  }
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: @spacing-lg;
+}
+
+.formTitle {
+  font-size: @font-size-2xl;
+  font-weight: 700;
+  color: @text-primary;
+  margin-bottom: @spacing-sm;
+}
+
+.formSubtitle {
+  font-size: @font-size-base;
+  color: @text-secondary;
+}
+
+.link {
+  color: @primary-color;
+  cursor: pointer;
+  margin-left: @spacing-xs;
+
+  &:hover {
+    color: #40a9ff;
+  }
+}
+
+// ====== 注册成功结果页 ======
+.resultSection {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: @bg-page;
+}

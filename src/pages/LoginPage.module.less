@@ -1,0 +1,160 @@
+/**
+ * LoginPage.module.less — 登录页样式
+ * 使用 CSS Modules 实现样式隔离
+ * 使用全局注入的 Less 变量
+ */
+
+.loginPage {
+  display: flex;
+  min-height: 100vh;
+}
+
+// ====== 左侧品牌区 ======
+.brandSection {
+  flex: 1;
+  background: linear-gradient(135deg, @primary-color, #722ed1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: @spacing-2xl;
+
+  // 在大屏幕上显示，小屏幕隐藏
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.brandContent {
+  max-width: 420px;
+  color: #fff;
+}
+
+.brandTitle {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: @spacing-sm;
+  color: #fff;
+}
+
+.brandDesc {
+  font-size: @font-size-xl;
+  opacity: 0.85;
+  margin-bottom: @spacing-2xl;
+}
+
+.brandFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: @spacing-md;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: @spacing-sm;
+  font-size: @font-size-lg;
+  opacity: 0.9;
+}
+
+.featureIcon {
+  font-size: 18px;
+}
+
+// ====== 右侧表单区 ======
+.formSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: @bg-page;
+  padding: @spacing-lg;
+
+  @media (max-width: 768px) {
+    flex: unset;
+    width: 100%;
+  }
+}
+
+.formCard {
+  width: 100%;
+  max-width: 420px;
+  border-radius: @radius-lg !important;
+  box-shadow: @shadow-card !important;
+
+  :global(.ant-card-body) {
+    padding: @spacing-2xl !important;
+  }
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: @spacing-lg;
+}
+
+.formTitle {
+  font-size: @font-size-2xl;
+  font-weight: 700;
+  color: @text-primary;
+  margin-bottom: @spacing-sm;
+}
+
+.formSubtitle {
+  font-size: @font-size-base;
+  color: @text-secondary;
+}
+
+.link {
+  color: @primary-color;
+  cursor: pointer;
+  margin-left: @spacing-xs;
+
+  &:hover {
+    color: #40a9ff;
+  }
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+// ====== 其他登录方式 ======
+.divider {
+  display: flex;
+  align-items: center;
+  margin: @spacing-lg 0;
+  color: @text-hint;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e8e8e8;
+  }
+}
+
+.dividerText {
+  padding: 0 @spacing-md;
+  font-size: @font-size-sm;
+}
+
+.socialLogin {
+  display: flex;
+  justify-content: center;
+  gap: @spacing-lg;
+  margin-bottom: @spacing-lg;
+}
+
+// ====== 底部提示 ======
+.formFooter {
+  text-align: center;
+  color: @text-hint;
+  font-size: @font-size-sm;
+
+  p {
+    margin-bottom: @spacing-xs;
+  }
+}
