@@ -1,0 +1,17 @@
+{
+  "name": "01-typescript",
+  "version": "1.0.0",
+  "description": "TypeScript 基础学习 - 字面量类型、联合类型、类型断言、类型别名",
+  "scripts": {
+    "run:basic": "npx tsx 01-基础类型.ts",
+    "run:literal": "npx tsx 02-字面量类型.ts",
+    "run:union": "npx tsx 03-联合类型.ts",
+    "run:assertion": "npx tsx 04-类型断言.ts",
+    "run:alias": "npx tsx 05-类型别名.ts",
+    "run:all": "npx tsx 06-综合练习.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  }
+}
